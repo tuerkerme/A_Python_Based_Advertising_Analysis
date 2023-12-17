@@ -1,20 +1,21 @@
 /kaggle/input/product-advertising-data/Advertising_Data.csv
-'''
+
+```
 df = pd.read_csv("/kaggle/input/product-advertising-data/Advertising_Data.csv")
 df.head()
-'''
+```
  
 <img width="583" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/943219fa-4056-4e97-9427-811dc7497e22">
  
-'''
+```
 df.describe()
-'''
+```
 <img width="651" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/a631f350-38f9-44c8-abb4-a42bbf52fad1">
  
-'''
+```
 df.isnull().sum()
  
-'''
+```
  
 <img width="199" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/48188b6d-610c-4bb7-a4f4-8b3dd802299d">
  
@@ -34,19 +35,19 @@ Affiliate_Marketing: Advertising costs for affiliate marketing.
  
 Product_Sold: Number of products sold, presumably influenced by the advertising costs.
  
-'''
+```
 import matplotlib.pyplot as plt
  
 #### Histograms for Advertising Costs and Product Sold
 df.hist(bins=30, figsize=(15, 10))
-plt.suptitle('Distribution of Advertising Costs and Product Sold')
+plt.suptitle(`Distribution of Advertising Costs and Product Sold`)
 plt.show()
  
-'''
+```
  
 <img width="516" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/0a92bae8-e9ac-461e-85ab-f6ee886b78db">
  
- '''
+ ```
  import seaborn as sns
  ### Correlation Matrix and Heatmap
 #### Correlation matrix
@@ -54,36 +55,33 @@ corr = df.corr()
  
 #### Heatmap
 plt.figure(figsize=(10, 8))
-sns.heatmap(corr, annot=True, cmap='coolwarm')
-plt.title('Correlation Matrix')
+sns.heatmap(corr, annot=True, cmap=`coolwarm`)
+plt.title(`Correlation Matrix`)
 plt.show()
  
-'''
+```
  <img width="432" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/e3dac7fc-2100-49d5-845d-2679ea627e9b">
  
- '''
+ ```
  ### Pairplot to Visualize Relationships
 sns.pairplot(df)
 plt.show()
  
-'''
+```
  <img width="364" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/f0adfadc-fc62-4b69-b4ca-dd6cadac0422">
  
-'''
+```
 ### Scatter Plots with Regression Lines
-ad_channels = ['TV', 'Billboards', 'Google_Ads', 'Social_Media', 'Influencer_Marketing', 'Affiliate_Marketing']
+ad_channels = [`TV`, `Billboards`, `Google_Ads`, `Social_Media`, `Influencer_Marketing`, `Affiliate_Marketing`]
 for channel in ad_channels:
- sns.jointplot(x=channel, y='Product_Sold', data=df, kind='reg')
+ sns.jointplot(x=channel, y=`Product_Sold`, data=df, kind=`reg`)
  plt.show()
  
-'''
- <img width="234" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/2f4b0ac3-679e-4cfb-b74e-61c6e30d6e70">
+```
+ <img width="234" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/2f4b0ac3-679e-4cfb-b74e-61c6e30d6e70">  <img width="223" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/723f667b-bc94-457f-b4dc-f9a6e0a26413"> <img width="217" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/1eab539f-401d-4d50-9e94-7a60bf87e033">
  
- <img width="223" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/723f667b-bc94-457f-b4dc-f9a6e0a26413">
- 
- <img width="217" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/1eab539f-401d-4d50-9e94-7a60bf87e033">
- 
- FINDINGS
+### FINDINGS
+
 The visualizations provide further insights into the dataset:
 Scatter Plots (Advertising Channels vs. Product Sold):
 Each plot shows the relationship between the spending in a specific advertising channel and the number of products sold. There seems to be a general trend where higher advertising spending correlates with higher sales, especially noticeable in channels like Affiliate Marketing and Billboards.
@@ -219,7 +217,7 @@ Affiliate Marketing emerges as the most strongly correlated channel with sales, 
 
 TV and Google Ads exhibit some influence on sales but are less effective compared to other channels. Influencer Marketing shows the least correlation with sales, suggesting it may not be the most effective channel in this specific context.
 
-These correlations provide insights into where advertising budgets might be most effectively allocated to maximize sales. However, it's important to note that correlation does not imply causation, and these relationships might be influenced by various external factors.
+These correlations provide insights into where advertising budgets might be most effectively allocated to maximize sales. However, it`s important to note that correlation does not imply causation, and these relationships might be influenced by various external factors.
  
  
  
