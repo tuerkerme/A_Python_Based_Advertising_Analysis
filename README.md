@@ -1,3 +1,38 @@
+## Introduction
+
+This report presents an in-depth analysis of advertising data sourced from Kaggle.com, focusing on the impact of various advertising channels on product sales. The analysis leverages Python for sophisticated data processing, statistical analysis, and visualization. It encompasses a diverse range of advertising channels, including TV, Billboards, Google Ads, Social Media, Influencer Marketing, and Affiliate Marketing. The objective is to unravel which advertising mediums are most efficacious in driving sales and to provide data-driven insights for optimizing advertising strategies.
+
+## Methodology
+
+The dataset used in this analysis comprises detailed records of advertising expenditures across multiple channels and the corresponding product sales figures. The methodology involves:
+
+Descriptive Statistical Analysis: To summarize the central tendencies, dispersion, and distribution of advertising expenses and sales data.
+Correlation Analysis: To examine the relationships between spending in different advertising channels and the resulting product sales.
+
+Data Visualization: Employing Python libraries like Pandas for data manipulation, Matplotlib and Seaborn for crafting insightful visual representations of the data.
+Descriptive Statistics
+
+The descriptive statistics section offers a granular look at the advertising costs across channels:
+
+Analysis of mean, median, and standard deviation for each advertising channel.
+Discussion on the distribution characteristics, highlighting any asymmetries or outliers.
+Overview of sales figures, including average units sold and the variability in sales across different advertising efforts.
+
+Correlation Analysis
+This section presents a detailed correlation analysis:
+
+Calculation and interpretation of Pearson correlation coefficients between each advertising channel and product sales.
+Identification of the channels with the strongest and weakest correlations to sales figures.
+Insights into how different advertising spends relate to sales performance, providing a basis for identifying the most effective channels.
+
+### Data Visualization
+In-depth visualizations include:
+
+Scatter Plots: For each advertising channel versus product sales, showcasing trends and patterns in the relationship between advertising spend and sales.
+Heatmap of Correlation Matrix: Providing a color-coded overview of the correlations between all variables, helping to quickly identify the strength and direction of relationships.
+
+
+
 /kaggle/input/product-advertising-data/Advertising_Data.csv
 
 ```
@@ -80,110 +115,86 @@ for channel in ad_channels:
 ```
  <img width="234" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/2f4b0ac3-679e-4cfb-b74e-61c6e30d6e70">  <img width="223" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/723f667b-bc94-457f-b4dc-f9a6e0a26413"> <img width="217" alt="image" src="https://github.com/tuerkerme/A_Python_Based_Advertising_Analysis/assets/149696414/1eab539f-401d-4d50-9e94-7a60bf87e033">
  
-### FINDINGS
+## FINDINGS
 
-The visualizations provide further insights into the dataset:
-Scatter Plots (Advertising Channels vs. Product Sold):
+### The visualizations provide further insights into the dataset:
+
+#### Scatter Plots (Advertising Channels vs. Product Sold):
 Each plot shows the relationship between the spending in a specific advertising channel and the number of products sold. There seems to be a general trend where higher advertising spending correlates with higher sales, especially noticeable in channels like Affiliate Marketing and Billboards.
 
-Correlation Matrix (Heatmap):
+#### Correlation Matrix (Heatmap):
 The heatmap visualizes the correlation coefficients between different variables.
 
 Affiliate Marketing has the highest positive correlation with Product Sold, reinforcing its potential effectiveness in driving sales. Other channels like Billboards and Social Media also show positive correlations with sales, albeit to a lesser extent.
 
 These analyses suggest that advertising, particularly through channels like Affiliate Marketing, Billboards, and Social Media, is positively associated with sales. However, the exact effectiveness of each channel can vary, and these insights can guide you in optimizing your advertising strategy.
 
-Descriptive Statistics
+### Descriptive Statistics
+
 TV, Billboards, Google_Ads, Social_Media, Influencer_Marketing, Affiliate_Marketing:
 The average advertising costs across these channels are fairly evenly distributed, with means ranging from approximately 466to
 517. The standard deviations indicate a moderate level of variability in spending across these channels.
-Product_Sold:
+
+#### Product_Sold:
 The average number of products sold is about 7032 units, with a standard deviation of 1704 units, indicating variability in sales figures.
-TV Advertising Costs:
+
+#### TV Advertising Costs:
 
 Mean (Average): $517.43, on average, is spent on TV advertising.
-
 Standard Deviation: $288.11, TV advertising costs vary widely across the dataset.
-
 Minimum: 1.04, indicating at least one very low spend in TV advertising.
-
 Maximum: $998.10, showing that some campaigns have very high TV advertising costs.
-
 Median (50th percentile): $513.97, meaning that half of the TV advertising costs are below this value and half are above.
 
-Billboards Advertising Costs:
+#### Billboards Advertising Costs:
 
 Mean: $502.64.
-
 Standard Deviation: $275.84, indicating variability but slightly less than TV advertising.
-
 Minimum: $3.63.
-
 Maximum: $995.32.
-
 Median: $533.02.
 
-Google_Ads Advertising Costs:
+#### Google_Ads Advertising Costs:
 
 Mean: $512.44.
-
 Standard Deviation: $285.42.
-
 Minimum: $14.86.
-
 Maximum: $999.23.
-
 Median: $528.96.
 
-Social_Media Advertising Costs:
+#### Social_Media Advertising Costs:
 
 Mean: $489.80.
-
 Standard Deviation: $273.88.
-
 Minimum: $11.69.
-
 Maximum: $996.16.
-
 Median: $486.38.
 
-Influencer_Marketing Advertising Costs:
+#### Influencer_Marketing Advertising Costs:
 
 Mean: $465.73.
-
 Standard Deviation: $288.31, showing significant variability.
-
 Minimum: $0.77.
-
 Maximum: $999.83.
-
 Median: $480.35.
 
-Affiliate_Marketing Advertising Costs:
+#### Affiliate_Marketing Advertising Costs:
 
 Mean: $484.43.
-
 Standard Deviation: $277.96.
-
 Minimum: $6.74.
-
 Maximum: $987.58.
-
 Median: $451.31.
 
-Product Sold:
+#### Product Sold:
 
 Mean: 7031.52 units, which is a strong indication of sales volume.
-
 Standard Deviation: 1703.61 units, suggesting that sales figures also vary considerably across different campaigns or time periods.
-
 Minimum: 2259 units, indicating the lowest sales in the dataset.
-
 Maximum: 12227 units, showing the highest sales figure achieved.
-
 Median: 7051 units, which helps in understanding that half of the sales figures are below this value and half above.
 
-Interpretation:
+### Interpretation:
 
 The means and medians of the advertising costs across different channels are relatively close, suggesting a roughly symmetric distribution of spending in these channels.
 
@@ -191,8 +202,9 @@ The standard deviations are substantial in comparison to the means, indicating a
 
 These detailed statistics provide a more nuanced view of the spending patterns in each advertising channel and their potential impact on sales.
 
-Correlation Analysis:
-The correlation coefficients range from -0.13 to 0.61. Affiliate_Marketing shows the strongest positive correlation with Product_Sold (0.61), suggesting a strong relationship between affiliate marketing spending and sales.
+#### Correlation Analysis:
+T
+he correlation coefficients range from -0.13 to 0.61. Affiliate_Marketing shows the strongest positive correlation with Product_Sold (0.61), suggesting a strong relationship between affiliate marketing spending and sales.
 
 Billboards and Social_Media also show notable positive correlations with sales (0.48 and 0.40, respectively). Other advertising channels like TV and Google_Ads have positive but weaker correlations with sales.
 
@@ -212,7 +224,8 @@ A weak positive correlation. This suggests that while there is some relationship
 
 A very weak positive correlation. This indicates a minimal relationship between influencer marketing spending and sales. The low correlation suggests that influencer marketing, in this particular dataset, does not have a substantial impact on sales, or its impact is overshadowed by other factors.
 
-Interpretation:
+### Interpretation:
+
 Affiliate Marketing emerges as the most strongly correlated channel with sales, suggesting its effectiveness in this dataset. Billboards and Social Media also show good potential in influencing sales.
 
 TV and Google Ads exhibit some influence on sales but are less effective compared to other channels. Influencer Marketing shows the least correlation with sales, suggesting it may not be the most effective channel in this specific context.
